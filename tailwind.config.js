@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // Add support for dark mode, toggled via a class:
+  // https://tailwindcss.com/docs/dark-mode
+  darkMode: ["class", '[data-mode="dark"]'],
   // Inform Tailwind of where the classes will be defined:
   // https://tailwindcss.com/docs/content-configuration
   content: [
