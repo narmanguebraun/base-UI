@@ -14,5 +14,10 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  // https://tailwindcss.com/docs/plugins
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/forms"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
