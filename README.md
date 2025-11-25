@@ -1,31 +1,68 @@
 # BASE-UI
 
-This is a starter to build a design systems for a Next.js app.
+Design system starter with Next.js 15, React 19, Storybook 10 & Tailwind CSS.
 
-## Installation
+**🚀 Recently Updated (November 2025)**  
+This template has been upgraded to the latest stable versions:
 
-1. Clone the repository: `git clone https://github.com/narmanguebraun/base-UI.git`
-2. Navigate to the project directory: `cd base-UI`
-3. Install the dependencies: `npm install`
+- **Next.js 15.5** - Latest stable release
+- **React 19** - New features and performance improvements
+- **Storybook 10** - Enhanced developer experience
 
-## View the App on the browser
+If you need the previous version (Next.js 14/React 18/Storybook 8), see the [v1.0-nextjs14-react18 tag](https://github.com/narmanguebraun/base-UI/tree/v1.0-nextjs14-react18).
 
-1. Start the development server: `npm run dev`
-2. Open your browser and visit `http://localhost:3000`.
+## Tech Stack
 
-## View the UI documented on Storybook
+- ⚡️ **Next.js 15** - React framework with App Router
+- ⚛️ **React 19** - Latest React version
+- 📚 **Storybook 10** - Component development and documentation
+- 🎨 **Tailwind CSS 3** - Utility-first CSS framework
+- 🔷 **TypeScript** - Type safety
+- 🎯 **React Aria** - Accessible UI primitives for building design systems
+- 🎨 **Class Variance Authority (CVA)** - CSS-in-TS library for component variants
 
-1. Start Storybook: `npm run storybook`
-2. Open your browser and visit `http://localhost:6006/`.
+### Documentation
 
-## Technologies
+- [Next.js](https://nextjs.org/docs)
+- [React](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/docs/installation)
+- [TypeScript](https://www.typescriptlang.org/docs/)
+- [React Aria](https://react-spectrum.adobe.com/react-aria/)
+- [Class Variance Authority](https://cva.style/docs)
+- [Storybook](https://storybook.js.org/)
 
-This starter is built with:
+## Getting Started
 
-- [Next.js](https://nextjs.org/docs): A React framework for server-side rendering and static site generation.
-- [Tailwind CSS](https://tailwindcss.com/docs/installation): A highly customizable CSS framework.
-- [React](https://react.dev/): A JavaScript library for building user interfaces.
-- [TypeScript](https://www.typescriptlang.org/docs/): A typed superset of JavaScript that compiles to plain JavaScript.
-- [React Aria](https://react-spectrum.adobe.com/react-aria/): A library of unstyled React components and hooks to build accessible UI components or design system.
-- [cva](https://cva.style/docs): A CSS-in-TS library.
-- [Storybook](https://storybook.js.org/): A frontend workshop for building UI components and pages in isolation.
+### Installation
+
+1. **Use this template**: Click the "Use this template" button at the top of this repo, or clone it:
+
+```bash
+   git clone https://github.com/narmanguebraun/base-UI.git
+   cd base-UI
+   npm install
+```
+
+### Development
+
+**Run the Next.js app:**
+
+```bash
+npm run dev
+```
+
+Then open [http://localhost:3000](http://localhost:3000) in your browser.
+
+**Run Storybook:**
+
+```bash
+npm run storybook
+```
+
+Then open [http://localhost:6006](http://localhost:6006) to view the component library.
+
+**Build for production:**
+
+```bash
+npm run build
+```
