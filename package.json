@@ -1,6 +1,7 @@
 {
   "name": "base-ui",
   "version": "2.0.0",
+  "description": "Design system starter with Next.js 15, React 19, Storybook 10 & Tailwind CSS",
   "private": true,
   "scripts": {
     "dev": "next dev",
