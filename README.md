@@ -66,3 +66,7 @@ Then open [http://localhost:6006](http://localhost:6006) to view the component l
 ```bash
 npm run build
 ```
+
+## License
+
+This project is licensed under the terms of the MIT license.
