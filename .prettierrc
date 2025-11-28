@@ -1,3 +1,26 @@
 {
-  "plugins": ["prettier-plugin-tailwindcss"]
+  "tabWidth": 2,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": false,
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "importOrder": [
+    "^(next/(.*)$)|^(next$)",
+    "",
+    "^(react/(.*)$)|^(react$)",
+    "",
+    "<BUILTIN_MODULES>",
+    "",
+    "<THIRD_PARTY_MODULES>",
+    "",
+    "^(?!.*[.]css$)[./].*$",
+    ".css$"
+  ],
+  "tailwindFunctions": ["cva"],
+  "plugins": [
+    "prettier-plugin-tailwindcss",
+    "@ianvs/prettier-plugin-sort-imports"
+  ],
+  "pluginSearchDirs": false
 }
