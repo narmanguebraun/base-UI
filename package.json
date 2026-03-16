@@ -35,7 +35,7 @@
     "@ianvs/prettier-plugin-sort-imports": "^4.7.1",
     "@storybook/addon-a11y": "^10.2.16",
     "@storybook/addon-docs": "^10.2.16",
-    "@storybook/addon-links": "^10.0.8",
+    "@storybook/addon-links": "^10.2.19",
     "@storybook/nextjs": "^10.0.8",
     "eslint-plugin-storybook": "^10.0.8",
     "prettier": "^3.8.1",
