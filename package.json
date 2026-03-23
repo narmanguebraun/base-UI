@@ -22,7 +22,7 @@
     "autoprefixer": "^10.4.19",
     "class-variance-authority": "^0.7.0",
     "eslint-config-next": "^15.5.12",
-    "next": "^15.5.8",
+    "next": "^15.5.14",
     "postcss": "^8.5.8",
     "react": "^19.0.0",
     "react-aria": "^3.47.0",
