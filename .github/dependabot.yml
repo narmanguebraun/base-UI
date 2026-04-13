@@ -5,10 +5,23 @@ updates:
     schedule:
       interval: "weekly"
       day: "monday"
-    open-pull-requests-limit: 5
+      time: "09:00"
+      timezone: "Europe/Paris"
+    groups:
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+    open-pull-requests-limit: 10
     labels:
       - "dependencies"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
     ignore:
       # Ignore major version bumps — review those manually
+      # NOTE: also applies to react, typescript, etc.
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
