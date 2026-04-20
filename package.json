@@ -25,7 +25,7 @@
     "next": "^15.5.14",
     "postcss": "^8.5.8",
     "react": "^19.0.0",
-    "react-aria": "^3.47.0",
+    "react-aria": "^3.48.0",
     "react-dom": "^19.2.4",
     "tailwindcss": "^3.4.19",
     "typescript": "^5.4.5"
