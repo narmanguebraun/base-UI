@@ -2,10 +2,11 @@
 
 ## Supported Versions
 
-| Version                     | Supported |
-| --------------------------- | --------- |
-| 2.x (Next.js 15 / React 19) | ✅        |
-| 1.x (Next.js 14 / React 18) | ❌        |
+| Version                       | Supported |
+| ----------------------------- | --------- |
+| 2.1.x (Next.js 16 / React 19) | ✅        |
+| 2.0.x (Next.js 15 / React 19) | ❌        |
+| 1.x (Next.js 14 / React 18)   | ❌        |
 
 ## Reporting a Vulnerability
 
