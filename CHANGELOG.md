@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [2.1.0] - 2026-04-28
+
+### Changed
+
+- Upgraded Next.js from 15.5.15 to 16.2.4
+- Upgraded eslint-config-next to match Next.js version
+
+### Breaking Changes
+
+- Next.js 16 includes breaking changes — see [Next.js 16 upgrade guide](https://nextjs.org/docs/app/building-your-application/upgrading/version-16)
+
 ## [2.0.0] - 2025-11-25
 
 ### Changed
