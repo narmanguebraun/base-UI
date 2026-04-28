@@ -14,6 +14,26 @@ updates:
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
+      next:
+        patterns:
+          - "next"
+          - "eslint-config-next"
+      storybook:
+        patterns:
+          - "storybook"
+          - "@storybook/*"
+          - "@chromatic-com/storybook"
+          - "eslint-plugin-storybook"
+      tailwind:
+        patterns:
+          - "tailwindcss"
+          - "@tailwindcss/*"
+          - "postcss"
+          - "autoprefixer"
+      prettier:
+        patterns:
+          - "prettier"
+          - "prettier-plugin-tailwindcss"
     open-pull-requests-limit: 10
     labels:
       - "dependencies"
@@ -22,6 +42,6 @@ updates:
       include: "scope"
     ignore:
       # Ignore major version bumps — review those manually
-      # NOTE: also applies to react, typescript, etc.
+      # NOTE: also applies to react, next, storybook, typescript, etc.
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
