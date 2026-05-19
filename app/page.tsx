@@ -20,7 +20,7 @@ export default function Home() {
         <h2>Design System starter</h2>
         <p>Public template</p>
         <p>
-          Next, Tailwind CSS, Class Variance Autority, React Aria, Storybook
+          Next, Tailwind CSS, Class Variance Authority, React Aria, Storybook
         </p>
       </section>
     </main>
