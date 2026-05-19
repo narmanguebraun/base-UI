@@ -18,7 +18,7 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    children: "Upload",
+    children: "Default",
     intent: "default",
     fullWidth: false
   }
@@ -26,7 +26,7 @@ export const Default: Story = {
 
 export const Error: Story = {
   args: {
-    children: "Upload",
+    children: "Error",
     intent: "error",
     fullWidth: false
   }
@@ -34,7 +34,7 @@ export const Error: Story = {
 
 export const Warning: Story = {
   args: {
-    children: "Upload",
+    children: "Warning",
     intent: "warning",
     fullWidth: false
   }
@@ -42,7 +42,7 @@ export const Warning: Story = {
 
 export const Secondary: Story = {
   args: {
-    children: "Upload",
+    children: "Secondary",
     intent: "secondary",
     fullWidth: false
   }
@@ -50,7 +50,7 @@ export const Secondary: Story = {
 
 export const Tertiary: Story = {
   args: {
-    children: "Upload",
+    children: "Tertiary",
     intent: "tertiary",
     fullWidth: false
   }
@@ -58,7 +58,7 @@ export const Tertiary: Story = {
 
 export const Disabled: Story = {
   args: {
-    children: "Upload",
+    children: "Disabled",
     intent: "default",
     fullWidth: false,
     isDisabled: true
