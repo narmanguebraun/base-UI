@@ -1,29 +1,25 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+@theme {
+  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
+  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+  @apply bg-white text-gray-900;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-gray-950 text-gray-200;
+  }
 }
 
 :-moz-selection {
-  background: var(--foreground);
-  color: var(--background);
+  @apply bg-gray-900 text-white;
 }
 ::selection {
-  background: var(--foreground);
-  color: var(--background);
+  @apply bg-gray-900 text-white;
 }
