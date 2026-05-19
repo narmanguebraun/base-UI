@@ -52,7 +52,6 @@ export function Button({
       {...buttonProps}
       ref={ref}
       className={buttonStyles({ intent, fullWidth, isDisabled })}
-      {...props}
     >
       {children}
     </button>
