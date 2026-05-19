@@ -2,6 +2,29 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.0.0] - 2026-05-19
+
+### Changed
+
+- Migrated from Tailwind CSS v3 to v4
+  - Replaced `tailwind.config.js` with CSS-first configuration in `globals.css`
+  - Replaced `autoprefixer` with `@tailwindcss/postcss` (autoprefixing now built into v4)
+  - Removed `@tailwindcss/aspect-ratio` (aspect-ratio utilities now built into v4 core)
+  - Dark mode now uses `@media (prefers-color-scheme: dark)` exclusively
+- Converted home page to a Server Component
+- Updated app metadata title and description
+- Improved Storybook story labels to reflect each button intent
+
+### Fixed
+
+- Removed duplicate `intent` type declaration in `Button` — type is now inferred solely from `VariantProps`
+- Removed redundant `...props` spread in `Button` that was overriding `useButton`'s processed aria and event attributes
+- Fixed typo in page.tsx — Class Variance Authority
+
+### Breaking Changes
+
+- Tailwind CSS v4 includes a new CSS-first configuration model and breaking changes — see [Tailwind CSS v4 upgrade guide](https://tailwindcss.com/docs/upgrade-guide)
+
 ## [2.1.0] - 2026-04-28
 
 ### Changed
