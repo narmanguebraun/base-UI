@@ -6,7 +6,6 @@ import { cva, VariantProps } from "class-variance-authority"
 import { AriaButtonProps, useButton } from "react-aria"
 
 type ButtonProps = {
-  intent: "default" | "error" | "warning" | "secondary" | "tertiary"
   fullWidth?: boolean
   isDisabled?: boolean
 } & AriaButtonProps &
