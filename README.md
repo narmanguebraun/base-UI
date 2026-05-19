@@ -1,22 +1,23 @@
 # BASE-UI
 
-Design system starter with Next.js 16, React 19, Storybook 10 & Tailwind CSS.
+Design system starter with Next.js 16, React 19, Storybook 10 & Tailwind CSS 4.
 
-**🚀 Recently Updated (April 2026)**  
+**🚀 Recently Updated (May 2026)**  
 This template has been upgraded to the latest stable versions:
 
+- **Tailwind CSS 4** - CSS-first configuration, new plugin syntax, built-in autoprefixing
 - **Next.js 16** - Latest stable release
 - **React 19** - New features and performance improvements
 - **Storybook 10** - Enhanced developer experience
 
-If you need the previous version (Next.js 15/React 19/Storybook 10), see the [v2.0.0 tag](https://github.com/narmanguebraun/base-UI/tree/v2.0.0).
+If you need the previous version (Tailwind CSS 3), see the [v2.1.0 tag](https://github.com/narmanguebraun/base-UI/tree/v2.1.0).
 
 ## Tech Stack
 
 - **Next.js 16** - React framework with App Router. [Read docs &rarr;](https://nextjs.org/docs)
 - **React 19** - Latest React version. [Read docs &rarr;](https://react.dev/)
 - **Storybook 10** - Component development and documentation. [Read docs &rarr;](https://storybook.js.org/)
-- **Tailwind CSS 3** - Utility-first CSS framework. [Read docs &rarr;](https://tailwindcss.com/docs/installation)
+- **Tailwind CSS 4** - Utility-first CSS framework. [Read docs &rarr;](https://tailwindcss.com/docs/installation)
 - **TypeScript** - Type safety. [Read docs &rarr;](https://www.typescriptlang.org/docs/)
 - **React Aria** - Accessible UI primitives for building design systems. [Read docs &rarr;](https://react-spectrum.adobe.com/react-aria/)
 - **Class Variance Authority (CVA)** - CSS-in-TS library for component variants. [Read docs &rarr;](https://cva.style/docs)
