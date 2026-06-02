@@ -1,59 +1,64 @@
 "use client"
 
+// React Aria hooks require a client component
+
 import { useRef } from "react"
 
 import { cva, VariantProps } from "class-variance-authority"
 import { AriaButtonProps, useButton } from "react-aria"
 
-type ButtonProps = {
-  fullWidth?: boolean
-  isDisabled?: boolean
-} & AriaButtonProps &
-  VariantProps<typeof buttonStyles>
-
 const buttonStyles = cva(
-  "flex items-center text-sm justify-center rounded-lg px-4 py-2 hover:bg-opacity-80 focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-white dark:focus:ring-offset-black",
+  [
+    "inline-flex items-center justify-center",
+    "text-sm font-medium",
+    "px-4 py-2 rounded-[var(--radius)]",
+    "hover:opacity-90",
+    "focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-[var(--background)]",
+    "disabled:opacity-50 disabled:cursor-not-allowed",
+    "transition-opacity",
+  ].join(" "),
   {
     variants: {
       intent: {
-        default: "bg-gray-100 text-gray-950 focus:ring-gray-100",
-        error: "bg-rose-600 text-white focus:ring-rose-600",
-        warning: "bg-yellow-500 text-gray-950 focus:ring-yellow-400",
-        secondary:
-          "bg-gray-950 text-gray-100 border border-gray-800 focus:ring-gray-950 hover:bg-gray-800",
-        tertiary:
-          "bg-transparent text-current focus:ring-yellow-400 hover:bg-gray-800"
+        default:
+          "bg-[var(--muted)] text-[var(--foreground)] focus:ring-[var(--muted)]",
+        primary:
+          "bg-[var(--primary)] text-[var(--primary-foreground)] focus:ring-[var(--primary)]",
+        destructive:
+          "bg-[var(--destructive)] text-[var(--destructive-foreground)] focus:ring-[var(--destructive)]",
+        warning:
+          "bg-[var(--warning)] text-[var(--warning-foreground)] focus:ring-[var(--warning)]",
+        ghost:
+          "bg-transparent text-[var(--foreground)] hover:bg-[var(--muted)] focus:ring-[var(--primary)]",
       },
-      fullWidth: {
-        true: "w-full"
-      },
-      isDisabled: {
-        true: "opacity-50 cursor-not-allowed"
-      }
     },
     defaultVariants: {
-      intent: "default"
-    }
+      intent: "default",
+    },
   }
 )
 
-export function Button({
-  intent,
-  fullWidth,
-  isDisabled,
-  ...props
-}: ButtonProps) {
-  const ref = useRef(null)
-  const { children } = props
-  const { buttonProps } = useButton(props, ref)
+type ButtonProps = AriaButtonProps & VariantProps<typeof buttonStyles> & {
+  fullWidth?: boolean
+}
+
+export function Button({ intent, fullWidth, ...props }: ButtonProps) {
+  const ref = useRef<HTMLButtonElement>(null)
+  const { buttonProps, isPressed } = useButton(props, ref)
 
   return (
     <button
       {...buttonProps}
       ref={ref}
-      className={buttonStyles({ intent, fullWidth, isDisabled })}
+      data-pressed={isPressed || undefined}
+      className={[
+        buttonStyles({ intent }),
+        fullWidth ? "w-full" : "",
+      ]
+        .filter(Boolean)
+        .join(" ")}
     >
-      {children}
+      {props.children}
     </button>
   )
 }

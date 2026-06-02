@@ -1,25 +1,55 @@
 @import "tailwindcss";
-@plugin "@tailwindcss/typography";
-@plugin "@tailwindcss/forms";
 
 @theme {
-  --background-image-gradient-radial: radial-gradient(var(--tw-gradient-stops));
-  --background-image-gradient-conic: conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops));
-}
+  /* Radius */
+  --radius: 0.5rem;
+  --radius-tighter: calc(var(--radius) - 2px);
+  --radius-tightest: calc(var(--radius) - 4px);
 
-body {
-  @apply bg-white text-gray-900;
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, monospace;
+
+  /* Color — light mode */
+  --background: oklch(100% 0 0);
+  --foreground: oklch(9% 0 0);
+  --muted: oklch(96% 0 0);
+  --muted-foreground: oklch(45% 0 0);
+  --border: oklch(90% 0 0);
+  --primary: oklch(20% 0 0);
+  --primary-foreground: oklch(98% 0 0);
+  --destructive: oklch(55% 0.22 27);
+  --destructive-foreground: oklch(98% 0 0);
+  --success: oklch(52% 0.17 152);
+  --success-foreground: oklch(98% 0 0);
+  --warning: oklch(72% 0.18 75);
+  --warning-foreground: oklch(9% 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
-  body {
-    @apply bg-gray-950 text-gray-200;
+  :root {
+    --background: oklch(9% 0 0);
+    --foreground: oklch(98% 0 0);
+    --muted: oklch(15% 0 0);
+    --muted-foreground: oklch(60% 0 0);
+    --border: oklch(20% 0 0);
+    --primary: oklch(98% 0 0);
+    --primary-foreground: oklch(9% 0 0);
   }
 }
 
-:-moz-selection {
-  @apply bg-gray-900 text-white;
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
 }
+
 ::selection {
-  @apply bg-gray-900 text-white;
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+:-moz-selection {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
 }

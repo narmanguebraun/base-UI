@@ -24,10 +24,18 @@ export const Default: Story = {
   }
 }
 
-export const Error: Story = {
+export const Primary: Story = {
   args: {
-    children: "Error",
-    intent: "error",
+    children: "Primary",
+    intent: "primary",
+    fullWidth: false
+  }
+}
+
+export const Destructive: Story = {
+  args: {
+    children: "Destructive",
+    intent: "destructive",
     fullWidth: false
   }
 }
@@ -40,18 +48,10 @@ export const Warning: Story = {
   }
 }
 
-export const Secondary: Story = {
+export const Ghost: Story = {
   args: {
-    children: "Secondary",
-    intent: "secondary",
-    fullWidth: false
-  }
-}
-
-export const Tertiary: Story = {
-  args: {
-    children: "Tertiary",
-    intent: "tertiary",
+    children: "Ghost",
+    intent: "ghost",
     fullWidth: false
   }
 }
