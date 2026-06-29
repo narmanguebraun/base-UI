@@ -23,9 +23,9 @@
     "eslint-config-next": "^16.2.6",
     "next": "^16.2.6",
     "postcss": "^8.5.15",
-    "react": "^19.2.6",
+    "react": "^19.2.7",
     "react-aria": "^3.48.0",
-    "react-dom": "^19.2.6",
+    "react-dom": "^19.2.7",
     "tailwindcss": "^4.3.0",
     "typescript": "^5.4.5"
   },
