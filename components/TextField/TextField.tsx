@@ -10,21 +10,21 @@ const inputStyles = cva(
   [
     "w-full",
     "text-sm",
-    "px-3 py-2 rounded-[var(--radius)]",
-    "bg-[var(--background)] text-[var(--foreground)]",
-    "border border-[var(--border)]",
-    "placeholder:text-[var(--muted-foreground)]",
-    "focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-[var(--background)]",
+    "px-3 py-2 rounded-(--radius)",
+    "bg-(--background) text-(--foreground)",
+    "border border-(--border)",
+    "placeholder:text-(--muted-foreground)",
+    "focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-(--background)",
     "disabled:opacity-50 disabled:cursor-not-allowed",
     "transition-colors"
   ].join(" "),
   {
     variants: {
       intent: {
-        default: "focus:ring-[var(--primary)]",
+        default: "focus:ring-(--primary)",
         destructive:
-          "border-[var(--destructive)] focus:ring-[var(--destructive)]",
-        warning: "border-[var(--warning)] focus:ring-[var(--warning)]"
+          "border-(--destructive) focus:ring-(--destructive)",
+        warning: "border-(--warning) focus:ring-(--warning)"
       }
     },
     defaultVariants: {
@@ -65,11 +65,11 @@ export function TextField({ intent, fullWidth, ...props }: TextFieldProps) {
     >
       <label
         {...labelProps}
-        className="text-sm font-medium text-[var(--foreground)]"
+        className="text-sm font-medium text-(--foreground)"
       >
         {props.label}
         {props.isRequired && (
-          <span aria-hidden="true" className="ml-0.5 text-[var(--destructive)]">
+          <span aria-hidden="true" className="ml-0.5 text-(--destructive)">
             *
           </span>
         )}
@@ -83,13 +83,13 @@ export function TextField({ intent, fullWidth, ...props }: TextFieldProps) {
       {props.description && !isInvalid && (
         <p
           {...descriptionProps}
-          className="text-sm text-[var(--muted-foreground)]"
+          className="text-sm text-(--muted-foreground)"
         >
           {props.description}
         </p>
       )}
       {isInvalid && errorContent && (
-        <p {...errorMessageProps} className="text-sm text-[var(--destructive)]">
+        <p {...errorMessageProps} className="text-sm text-(--destructive)">
           {errorContent}
         </p>
       )}

@@ -11,9 +11,9 @@ const buttonStyles = cva(
   [
     "inline-flex items-center justify-center",
     "text-sm font-medium",
-    "px-4 py-2 rounded-[var(--radius)]",
+    "px-4 py-2 rounded-(--radius)",
     "hover:opacity-90",
-    "focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-[var(--background)]",
+    "focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-(--background)",
     "disabled:opacity-50 disabled:cursor-not-allowed",
     "transition-opacity",
   ].join(" "),
@@ -21,15 +21,15 @@ const buttonStyles = cva(
     variants: {
       intent: {
         default:
-          "bg-[var(--muted)] text-[var(--foreground)] focus:ring-[var(--muted)]",
+          "bg-(--muted) text-(--foreground) focus:ring-(--muted)",
         primary:
-          "bg-[var(--primary)] text-[var(--primary-foreground)] focus:ring-[var(--primary)]",
+          "bg-(--primary) text-(--primary-foreground) focus:ring-(--primary)",
         destructive:
-          "bg-[var(--destructive)] text-[var(--destructive-foreground)] focus:ring-[var(--destructive)]",
+          "bg-(--destructive) text-(--destructive-foreground) focus:ring-(--destructive)",
         warning:
-          "bg-[var(--warning)] text-[var(--warning-foreground)] focus:ring-[var(--warning)]",
+          "bg-(--warning) text-(--warning-foreground) focus:ring-(--warning)",
         ghost:
-          "bg-transparent text-[var(--foreground)] hover:bg-[var(--muted)] focus:ring-[var(--primary)]",
+          "bg-transparent text-(--foreground) hover:bg-(--muted) focus:ring-(--primary)",
       },
     },
     defaultVariants: {
