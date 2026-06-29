@@ -14,7 +14,6 @@ const boxStyles = cva(
     "rounded-(--radius-tightest)",
     "border border-(--border)",
     "flex items-center justify-center",
-    "transition-colors",
   ].join(" "),
   {
     variants: {
@@ -69,8 +68,8 @@ export function Checkbox({
         {...labelProps}
         className={[
           "inline-flex items-center gap-2",
-          isDisabled ? "cursor-not-allowed opacity-50" : "cursor-pointer",
-        ].join(" ")}
+          isDisabled ? "opacity-50" : "",
+        ].filter(Boolean).join(" ")}
       >
         <input
           {...inputProps}

@@ -15,8 +15,7 @@ const inputStyles = cva(
     "border border-(--border)",
     "placeholder:text-(--muted-foreground)",
     "focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-(--background)",
-    "disabled:opacity-50 disabled:cursor-not-allowed",
-    "transition-colors"
+    "disabled:opacity-50"
   ].join(" "),
   {
     variants: {
