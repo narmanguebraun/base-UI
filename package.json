@@ -1,6 +1,6 @@
 {
   "name": "base-ui",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Design system starter with Next.js 15, React 19, Storybook 10 & Tailwind CSS",
   "private": true,
   "license": "MIT",

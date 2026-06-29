@@ -2,6 +2,28 @@
 
 All notable changes to this project will be documented in this file.
 
+## [3.1.0] - 2026-06-29
+
+### Added
+
+- `Checkbox` component — `useCheckbox` + `useToggleState`, size variants (sm/md/lg), indeterminate state with `aria-checked="mixed"`, description and error message with manual `aria-describedby`
+- Vitest + jest-axe test suite — 37 tests across Button, TextField, and Checkbox; behavior and axe accessibility tests for each meaningful state
+- `CLAUDE.md` — project conventions for Claude Code: stack decisions, token table, component anatomy rules, Storybook requirements, seven-step component checklist
+- `THEMING.md` — full token reference with light/dark values, customization walkthrough, and anti-patterns
+- `CONTRIBUTING.md` — setup, project structure, component anatomy guide, stories and test workflow, pre-submit checklist, commit format
+
+### Changed
+
+- Button refactored with semantic `intent` variants — `default`, `primary`, `destructive`, `warning`, `ghost` — all referencing design tokens
+- Semantic design token system introduced in `app/globals.css` — oklch color values with dark mode overrides in `@media (prefers-color-scheme: dark) :root`
+- All components updated to Tailwind v4 canonical CSS variable shorthand: `bg-(--primary)` instead of `bg-[var(--primary)]`
+- Bumped `@storybook` group to `^10.4.1`, `@types/react` to `^19.2.15`, `qs` to `6.15.2`
+
+### Fixed
+
+- Removed `@storybook/addon-styling` from Storybook addons (removed in Storybook 10)
+- Removed `argTypesRegex` from Storybook preview parameters (deprecated)
+
 ## [3.0.0] - 2026-05-19
 
 ### Changed
