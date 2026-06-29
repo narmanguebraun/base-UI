@@ -41,7 +41,10 @@ describe("Checkbox", () => {
 
   it("sets aria-checked to mixed when indeterminate", () => {
     render(<Checkbox label="Select all" isIndeterminate />)
-    expect(screen.getByRole("checkbox")).toHaveAttribute("aria-checked", "mixed")
+    expect(screen.getByRole("checkbox")).toHaveAttribute(
+      "aria-checked",
+      "mixed"
+    )
   })
 
   it("is disabled when isDisabled is true", () => {
@@ -57,7 +60,12 @@ describe("Checkbox", () => {
   })
 
   it("shows description when provided", () => {
-    render(<Checkbox label="Marketing emails" description="Receive product updates." />)
+    render(
+      <Checkbox
+        label="Marketing emails"
+        description="Receive product updates."
+      />
+    )
     expect(screen.getByText("Receive product updates.")).toBeInTheDocument()
   })
 
@@ -80,12 +88,16 @@ describe("Checkbox", () => {
   })
 
   it("checked state has no accessibility violations", async () => {
-    const { container } = render(<Checkbox label="Accept terms" defaultSelected />)
+    const { container } = render(
+      <Checkbox label="Accept terms" defaultSelected />
+    )
     expect(await axe(container)).toHaveNoViolations()
   })
 
   it("indeterminate state has no accessibility violations", async () => {
-    const { container } = render(<Checkbox label="Select all" isIndeterminate />)
+    const { container } = render(
+      <Checkbox label="Select all" isIndeterminate />
+    )
     expect(await axe(container)).toHaveNoViolations()
   })
 

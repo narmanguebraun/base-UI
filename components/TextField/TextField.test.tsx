@@ -17,8 +17,12 @@ describe("TextField", () => {
   })
 
   it("shows description when provided", () => {
-    render(<TextField label="Email" description="We'll never share your email." />)
-    expect(screen.getByText("We'll never share your email.")).toBeInTheDocument()
+    render(
+      <TextField label="Email" description="We'll never share your email." />
+    )
+    expect(
+      screen.getByText("We'll never share your email.")
+    ).toBeInTheDocument()
   })
 
   it("hides description and shows error when invalid", () => {
@@ -53,7 +57,7 @@ describe("TextField", () => {
 
   it.each(["default", "warning"] as const)(
     "%s intent has no accessibility violations",
-    async (intent) => {
+    async intent => {
       const { container } = render(<TextField label="Email" intent={intent} />)
       expect(await axe(container)).toHaveNoViolations()
     }
@@ -61,7 +65,11 @@ describe("TextField", () => {
 
   it("invalid state has no accessibility violations", async () => {
     const { container } = render(
-      <TextField label="Email" isInvalid errorMessage="Invalid email address." />
+      <TextField
+        label="Email"
+        isInvalid
+        errorMessage="Invalid email address."
+      />
     )
     expect(await axe(container)).toHaveNoViolations()
   })

@@ -6,7 +6,8 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata = {
   title: "Base UI",
-  description: "Design system starter with Next.js, React, Tailwind CSS, React Aria, and Storybook"
+  description:
+    "Design system starter with Next.js, React, Tailwind CSS, React Aria, and Storybook"
 }
 
 export default function RootLayout({

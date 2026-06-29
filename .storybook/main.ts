@@ -1,8 +1,9 @@
-import type { StorybookConfig } from "@storybook/nextjs";
+import type { StorybookConfig } from "@storybook/nextjs"
+
 const config: StorybookConfig = {
   stories: [
     "../components/**/*.mdx",
-    "../components/**/*.stories.@(js|jsx|ts|tsx)",
+    "../components/**/*.stories.@(js|jsx|ts|tsx)"
   ],
 
   addons: [
@@ -14,7 +15,7 @@ const config: StorybookConfig = {
 
   framework: {
     name: "@storybook/nextjs",
-    options: {},
+    options: {}
   },
 
   docs: {},
@@ -22,5 +23,5 @@ const config: StorybookConfig = {
   typescript: {
     reactDocgen: "react-docgen-typescript"
   }
-};
-export default config;
+}
+export default config

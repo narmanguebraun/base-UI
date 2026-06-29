@@ -21,8 +21,7 @@ const inputStyles = cva(
     variants: {
       intent: {
         default: "focus:ring-(--primary)",
-        destructive:
-          "border-(--destructive) focus:ring-(--destructive)",
+        destructive: "border-(--destructive) focus:ring-(--destructive)",
         warning: "border-(--warning) focus:ring-(--warning)"
       }
     },
@@ -80,10 +79,7 @@ export function TextField({ intent, fullWidth, ...props }: TextFieldProps) {
         className={inputStyles({ intent: isInvalid ? "destructive" : intent })}
       />
       {props.description && !isInvalid && (
-        <p
-          {...descriptionProps}
-          className="text-sm text-(--muted-foreground)"
-        >
+        <p {...descriptionProps} className="text-sm text-(--muted-foreground)">
           {props.description}
         </p>
       )}

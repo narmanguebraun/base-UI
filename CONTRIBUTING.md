@@ -73,18 +73,15 @@ const { buttonProps, isPressed } = useButton(props, ref)
 **CVA for visual variants, tokens only.** Visual variants go inside `cva()`. Layout props like `fullWidth` are applied as conditional classes outside CVA. Every class must reference a design token via `(--token)` — no raw Tailwind palette values.
 
 ```ts
-const buttonStyles = cva(
-  "rounded-(--radius) bg-(--background) ...",
-  {
-    variants: {
-      intent: {
-        primary: "bg-(--primary) text-(--primary-foreground)",
-        destructive: "bg-(--destructive) text-(--destructive-foreground)",
-      },
-    },
-    defaultVariants: { intent: "primary" },
-  }
-)
+const buttonStyles = cva("rounded-(--radius) bg-(--background) ...", {
+  variants: {
+    intent: {
+      primary: "bg-(--primary) text-(--primary-foreground)",
+      destructive: "bg-(--destructive) text-(--destructive-foreground)"
+    }
+  },
+  defaultVariants: { intent: "primary" }
+})
 ```
 
 **`data-*` attributes for React Aria state.** Expose interaction state so consumers can style against it if needed:
@@ -104,7 +101,7 @@ Use `|| undefined` so the attribute is absent (not `data-pressed="false"`) when 
 ```ts
 type SelectProps = Omit<AriaSelectProps<object>, "label"> &
   VariantProps<typeof selectStyles> & {
-    label: string      // required — not optional
+    label: string // required — not optional
     fullWidth?: boolean
   }
 ```
@@ -117,23 +114,28 @@ Create `Component.stories.ts` alongside the component. A complete story file cov
 
 ```ts
 import { type Meta, type StoryObj } from "@storybook/nextjs"
+
 import { Checkbox } from "./Checkbox"
 
 const meta = {
   title: "Components/Checkbox",
   component: Checkbox,
-  tags: ["autodocs"],           // required — generates the docs page
+  tags: ["autodocs"], // required — generates the docs page
   argTypes: {
-    onChange: { action: "onChange" },   // explicit, not argTypesRegex
-  },
+    onChange: { action: "onChange" } // explicit, not argTypesRegex
+  }
 } satisfies Meta<typeof Checkbox>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = { args: { label: "Accept terms" } }
-export const Checked: Story = { args: { label: "Accept terms", defaultSelected: true } }
-export const Disabled: Story = { args: { label: "Accept terms", isDisabled: true } }
+export const Checked: Story = {
+  args: { label: "Accept terms", defaultSelected: true }
+}
+export const Disabled: Story = {
+  args: { label: "Accept terms", isDisabled: true }
+}
 ```
 
 Verify in Storybook before submitting. Run `npm run storybook` and check every story in both light and dark mode — the browser is the source of truth, not the Storybook canvas alone.

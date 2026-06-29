@@ -12,13 +12,28 @@ export default function Home() {
           <Button intent="destructive">Destructive</Button>
           <Button intent="warning">Warning</Button>
           <Button intent="ghost">Ghost</Button>
-          <Button intent="default" isDisabled>Disabled</Button>
+          <Button intent="default" isDisabled>
+            Disabled
+          </Button>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 sm:items-start">
           <TextField label="Default" placeholder="you@example.com" />
-          <TextField label="With description" placeholder="you@example.com" description="We'll never share your email." />
-          <TextField label="Invalid" placeholder="you@example.com" isInvalid errorMessage="Please enter a valid email address." />
-          <TextField label="Disabled" placeholder="you@example.com" isDisabled />
+          <TextField
+            label="With description"
+            placeholder="you@example.com"
+            description="We'll never share your email."
+          />
+          <TextField
+            label="Invalid"
+            placeholder="you@example.com"
+            isInvalid
+            errorMessage="Please enter a valid email address."
+          />
+          <TextField
+            label="Disabled"
+            placeholder="you@example.com"
+            isDisabled
+          />
         </div>
       </div>
       <section className="text-regular leading-8">

@@ -1,7 +1,6 @@
 "use client"
 
 // React Aria hooks require a client component
-
 import { useId, useRef } from "react"
 
 import { cva, VariantProps } from "class-variance-authority"
@@ -13,19 +12,19 @@ const boxStyles = cva(
     "shrink-0",
     "rounded-(--radius-tightest)",
     "border border-(--border)",
-    "flex items-center justify-center",
+    "flex items-center justify-center"
   ].join(" "),
   {
     variants: {
       size: {
         sm: "h-3.5 w-3.5",
         md: "h-4 w-4",
-        lg: "h-5 w-5",
-      },
+        lg: "h-5 w-5"
+      }
     },
     defaultVariants: {
-      size: "md",
-    },
+      size: "md"
+    }
   }
 )
 
@@ -52,13 +51,14 @@ export function Checkbox({
   const descriptionId = useId()
   const errorId = useId()
 
-  const ariaDescribedBy = [
-    inputProps["aria-describedby"],
-    description && !isInvalid ? descriptionId : undefined,
-    isInvalid && errorMessage ? errorId : undefined,
-  ]
-    .filter(Boolean)
-    .join(" ") || undefined
+  const ariaDescribedBy =
+    [
+      inputProps["aria-describedby"],
+      description && !isInvalid ? descriptionId : undefined,
+      isInvalid && errorMessage ? errorId : undefined
+    ]
+      .filter(Boolean)
+      .join(" ") || undefined
 
   const isFilled = isSelected || props.isIndeterminate
 
@@ -68,14 +68,18 @@ export function Checkbox({
         {...labelProps}
         className={[
           "inline-flex items-center gap-2",
-          isDisabled ? "opacity-50" : "",
-        ].filter(Boolean).join(" ")}
+          isDisabled ? "opacity-50" : ""
+        ]
+          .filter(Boolean)
+          .join(" ")}
       >
         <input
           {...inputProps}
           ref={ref}
           className="sr-only"
-          aria-checked={props.isIndeterminate ? "mixed" : inputProps["aria-checked"]}
+          aria-checked={
+            props.isIndeterminate ? "mixed" : inputProps["aria-checked"]
+          }
           aria-describedby={ariaDescribedBy}
         />
         <div
@@ -87,7 +91,7 @@ export function Checkbox({
             isFilled
               ? "bg-(--primary) border-(--primary)"
               : "bg-(--background)",
-            isInvalid ? "border-(--destructive)" : "",
+            isInvalid ? "border-(--destructive)" : ""
           ]
             .filter(Boolean)
             .join(" ")}

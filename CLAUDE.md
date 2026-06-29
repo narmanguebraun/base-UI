@@ -13,20 +13,20 @@ Design system starter. Next.js 16, React 19, TypeScript, Tailwind CSS v4, Storyb
 
 Defined in `app/globals.css`. Reference via Tailwind arbitrary values: `bg-[var(--primary)]`, `text-[var(--foreground)]`. Never use raw Tailwind palette values in components.
 
-| Token | Purpose |
-|---|---|
-| `--background` | Page background |
-| `--foreground` | Primary text |
-| `--muted` | Subtle backgrounds |
-| `--muted-foreground` | Secondary text, placeholders |
-| `--border` | Borders and dividers |
-| `--primary` / `--primary-foreground` | Primary action |
-| `--destructive` / `--destructive-foreground` | Error / danger |
-| `--warning` / `--warning-foreground` | Caution |
-| `--success` / `--success-foreground` | Success (feedback UI only, not a button intent) |
-| `--radius` | Base border radius (0.5rem) |
-| `--radius-tighter` | radius - 2px |
-| `--radius-tightest` | radius - 4px |
+| Token                                        | Purpose                                         |
+| -------------------------------------------- | ----------------------------------------------- |
+| `--background`                               | Page background                                 |
+| `--foreground`                               | Primary text                                    |
+| `--muted`                                    | Subtle backgrounds                              |
+| `--muted-foreground`                         | Secondary text, placeholders                    |
+| `--border`                                   | Borders and dividers                            |
+| `--primary` / `--primary-foreground`         | Primary action                                  |
+| `--destructive` / `--destructive-foreground` | Error / danger                                  |
+| `--warning` / `--warning-foreground`         | Caution                                         |
+| `--success` / `--success-foreground`         | Success (feedback UI only, not a button intent) |
+| `--radius`                                   | Base border radius (0.5rem)                     |
+| `--radius-tighter`                           | radius - 2px                                    |
+| `--radius-tightest`                          | radius - 4px                                    |
 
 ## Component conventions
 

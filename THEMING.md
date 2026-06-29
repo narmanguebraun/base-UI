@@ -8,38 +8,38 @@ Defined in `app/globals.css`. Light mode values are in `@theme`; dark mode overr
 
 ### Radius
 
-| Token | Value | Usage |
-|---|---|---|
-| `--radius` | `0.5rem` | Default border radius |
-| `--radius-tighter` | `calc(var(--radius) - 2px)` | Slightly tighter (e.g. badges) |
-| `--radius-tightest` | `calc(var(--radius) - 4px)` | Tightest (e.g. checkbox) |
+| Token               | Value                       | Usage                          |
+| ------------------- | --------------------------- | ------------------------------ |
+| `--radius`          | `0.5rem`                    | Default border radius          |
+| `--radius-tighter`  | `calc(var(--radius) - 2px)` | Slightly tighter (e.g. badges) |
+| `--radius-tightest` | `calc(var(--radius) - 4px)` | Tightest (e.g. checkbox)       |
 
 ### Typography
 
-| Token | Value |
-|---|---|
+| Token         | Value                                  |
+| ------------- | -------------------------------------- |
 | `--font-sans` | `ui-sans-serif, system-ui, sans-serif` |
-| `--font-mono` | `ui-monospace, monospace` |
+| `--font-mono` | `ui-monospace, monospace`              |
 
 ### Color
 
 Tokens marked **↔** have a dark mode override. Tokens without one keep the same value in both modes.
 
-| Token | Light | Dark | Purpose |
-|---|---|---|---|
-| `--background` ↔ | `oklch(100% 0 0)` | `oklch(9% 0 0)` | Page background |
-| `--foreground` ↔ | `oklch(9% 0 0)` | `oklch(98% 0 0)` | Primary text |
-| `--muted` ↔ | `oklch(96% 0 0)` | `oklch(15% 0 0)` | Subtle backgrounds |
-| `--muted-foreground` ↔ | `oklch(45% 0 0)` | `oklch(60% 0 0)` | Secondary text, placeholders |
-| `--border` ↔ | `oklch(90% 0 0)` | `oklch(20% 0 0)` | Borders and dividers |
-| `--primary` ↔ | `oklch(20% 0 0)` | `oklch(98% 0 0)` | Primary action |
-| `--primary-foreground` ↔ | `oklch(98% 0 0)` | `oklch(9% 0 0)` | Text on primary |
-| `--destructive` | `oklch(55% 0.22 27)` | — | Error / danger |
-| `--destructive-foreground` | `oklch(98% 0 0)` | — | Text on destructive |
-| `--warning` | `oklch(72% 0.18 75)` | — | Warning |
-| `--warning-foreground` | `oklch(9% 0 0)` | — | Text on warning |
-| `--success` | `oklch(52% 0.17 152)` | — | Success (feedback UI only) |
-| `--success-foreground` | `oklch(98% 0 0)` | — | Text on success |
+| Token                      | Light                 | Dark             | Purpose                      |
+| -------------------------- | --------------------- | ---------------- | ---------------------------- |
+| `--background` ↔           | `oklch(100% 0 0)`     | `oklch(9% 0 0)`  | Page background              |
+| `--foreground` ↔           | `oklch(9% 0 0)`       | `oklch(98% 0 0)` | Primary text                 |
+| `--muted` ↔                | `oklch(96% 0 0)`      | `oklch(15% 0 0)` | Subtle backgrounds           |
+| `--muted-foreground` ↔     | `oklch(45% 0 0)`      | `oklch(60% 0 0)` | Secondary text, placeholders |
+| `--border` ↔               | `oklch(90% 0 0)`      | `oklch(20% 0 0)` | Borders and dividers         |
+| `--primary` ↔              | `oklch(20% 0 0)`      | `oklch(98% 0 0)` | Primary action               |
+| `--primary-foreground` ↔   | `oklch(98% 0 0)`      | `oklch(9% 0 0)`  | Text on primary              |
+| `--destructive`            | `oklch(55% 0.22 27)`  | —                | Error / danger               |
+| `--destructive-foreground` | `oklch(98% 0 0)`      | —                | Text on destructive          |
+| `--warning`                | `oklch(72% 0.18 75)`  | —                | Warning                      |
+| `--warning-foreground`     | `oklch(9% 0 0)`       | —                | Text on warning              |
+| `--success`                | `oklch(52% 0.17 152)` | —                | Success (feedback UI only)   |
+| `--success-foreground`     | `oklch(98% 0 0)`      | —                | Text on success              |
 
 ## Using tokens in components
 
@@ -51,10 +51,12 @@ const buttonStyles = cva(
   {
     variants: {
       intent: {
-        primary: "bg-(--primary) text-(--primary-foreground) focus:ring-(--primary)",
-        destructive: "bg-(--destructive) text-(--destructive-foreground) focus:ring-(--destructive)",
-      },
-    },
+        primary:
+          "bg-(--primary) text-(--primary-foreground) focus:ring-(--primary)",
+        destructive:
+          "bg-(--destructive) text-(--destructive-foreground) focus:ring-(--destructive)"
+      }
+    }
   }
 )
 ```
@@ -76,7 +78,7 @@ Changing a token in `globals.css` propagates to every component that references 
   --primary-foreground: oklch(98% 0 0);
 
   /* after */
-  --primary: oklch(55% 0.2 250);       /* brand blue */
+  --primary: oklch(55% 0.2 250); /* brand blue */
   --primary-foreground: oklch(98% 0 0);
 }
 ```
@@ -89,7 +91,7 @@ This single change updates: the primary Button, Checkbox fill color, focus rings
 @media (prefers-color-scheme: dark) {
   :root {
     /* must update this too, or dark mode still shows the old value */
-    --primary: oklch(70% 0.18 250);    /* lighter blue for dark mode */
+    --primary: oklch(70% 0.18 250); /* lighter blue for dark mode */
     --primary-foreground: oklch(9% 0 0);
   }
 }

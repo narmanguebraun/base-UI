@@ -23,7 +23,11 @@ describe("Button", () => {
   })
 
   it("is disabled when isDisabled is true", () => {
-    render(<Button intent="default" isDisabled>Click me</Button>)
+    render(
+      <Button intent="default" isDisabled>
+        Click me
+      </Button>
+    )
     expect(screen.getByRole("button")).toBeDisabled()
   })
 
@@ -40,7 +44,7 @@ describe("Button", () => {
 
   it.each(["default", "primary", "destructive", "warning", "ghost"] as const)(
     "%s intent has no accessibility violations",
-    async (intent) => {
+    async intent => {
       const { container } = render(<Button intent={intent}>Click me</Button>)
       expect(await axe(container)).toHaveNoViolations()
     }
