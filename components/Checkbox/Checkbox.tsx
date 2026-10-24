@@ -77,6 +77,7 @@ export function Checkbox({
           {...inputProps}
           ref={ref}
           className="sr-only"
+          type="checkbox"
           aria-checked={
             props.isIndeterminate ? "mixed" : inputProps["aria-checked"]
           }
