@@ -7,6 +7,14 @@ updates:
       day: "monday"
       time: "09:00"
       timezone: "Europe/Paris"
+    open-pull-requests-limit: 10
+    labels:
+      - "dependencies"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    # Minor and patch updates are grouped.
+    # Major updates are not grouped: each one opens its own PR to review manually.
     groups:
       react:
         patterns:
@@ -14,34 +22,57 @@ updates:
           - "react-dom"
           - "@types/react"
           - "@types/react-dom"
+        update-types:
+          - "minor"
+          - "patch"
       next:
         patterns:
           - "next"
           - "eslint-config-next"
+        update-types:
+          - "minor"
+          - "patch"
       storybook:
         patterns:
           - "storybook"
           - "@storybook/*"
           - "@chromatic-com/storybook"
           - "eslint-plugin-storybook"
+        update-types:
+          - "minor"
+          - "patch"
       tailwind:
         patterns:
           - "tailwindcss"
           - "@tailwindcss/*"
           - "postcss"
           - "autoprefixer"
+        update-types:
+          - "minor"
+          - "patch"
       prettier:
         patterns:
           - "prettier"
           - "prettier-plugin-tailwindcss"
-    open-pull-requests-limit: 10
-    labels:
-      - "dependencies"
-    commit-message:
-      prefix: "chore"
-      include: "scope"
-    ignore:
-      # Ignore major version bumps — review those manually
-      # NOTE: also applies to react, next, storybook, typescript, etc.
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
+          - "@ianvs/prettier-plugin-sort-imports"
+        update-types:
+          - "minor"
+          - "patch"
+      testing:
+        patterns:
+          - "vitest"
+          - "jsdom"
+          - "jest-axe"
+          - "@types/jest-axe"
+          - "@vitejs/plugin-react"
+          - "@testing-library/*"
+        update-types:
+          - "minor"
+          - "patch"
+      # Must stay last: catches every dependency not matched above.
+      others:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
