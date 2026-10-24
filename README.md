@@ -1,4 +1,4 @@
-# BASE-UI
+# Base
 
 Design system starter with Next.js 16, React 19, Storybook 10 & Tailwind CSS 4.
 
